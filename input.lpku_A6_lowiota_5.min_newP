@@ -1,0 +1,361 @@
+&INDATA
+  MGRID_FILE = 'NONEf'
+  LFREEB = F
+  DELT =   9.00E-01
+  TCON0 =   2.00E+00
+  NFP =    3
+  NCURR =    1
+  MPOL =    9  NTOR =    5
+  NS_ARRAY =  16
+  FTOL_ARRAY =  1.000000E-07
+!  NS_ARRAY =  16   49 89 129 169 199
+!  FTOL_ARRAY =  1.000000E-07  1.000000E-10 1e-10 1e-10 1e-10 1e-10
+  NITER = 2000
+  NSTEP =  50
+  NVACSKIP =    3
+  GAMMA =   0.000000E+00
+  PHIEDGE =   4.56246490904838E+01
+  BLOAT =   1.000000E+00
+  CURTOR =  -2.60000000000000E+06
+  SPRES_PED =   1.00000000000000E+00
+  AM = 1258707.03867241 -1258707.03867241 0 0 -1258707.03867241 1258707.03867241
+  AI =   0.00000000000000E+00  0.00000000000000E+00  0.00000000000000E+00  0.00000000000000E+00
+  0.00000000000000E+00  0.00000000000000E+00  0.00000000000000E+00  0.00000000000000E+00
+  0.00000000000000E+00  0.00000000000000E+00  0.00000000000000E+00
+  !AC_FORM =            0
+  AC =   8.18395699999999E+03  1.43603560000000E+06 -1.07407140000000E+07  7.44389200000000E+07
+ -3.22215650000000E+08  8.81050800000000E+08 -1.49389660000000E+09  1.52746800000000E+09
+ -8.67901590000000E+08  2.10351200000000E+08  0.00000000000000E+00
+  RAXIS =   8.03175894438075E+00  5.61481192936546E-01  3.84592746967274E-02  2.05685387791483E-03
+ -2.17286416494430E-04 -1.91687108117200E-04
+  ZAXIS =   0.00000000000000E+00 -3.56846416279399E-01 -2.96026665098520E-02 -2.22195398455868E-03
+ -4.99193990124506E-04  1.89955146141948E-04
+  RAXIS =   8.03175894438075E+00  5.61481192936546E-01  3.84592746967274E-02  2.05685387791483E-03
+ -2.17286416494430E-04 -1.91687108117200E-04
+  ZAXIS =   0.00000000000000E+00 -3.56846416279399E-01 -2.96026665098520E-02 -2.22195398455868E-03
+ -4.99193990124506E-04  1.89955146141948E-04
+  RBC(0,0) =   9.12881000000000E+00     ZBS(0,0) =   0.00000000000000E+00
+  RBC(1,0) =   1.29829533859621E-01     ZBS(1,0) =  -1.29829533859621E-01
+  RBC(2,0) =  -5.48220267744925E-02     ZBS(2,0) =   5.48220267744925E-02
+  RBC(-1,1) =  2.64675964414104E-01     ZBS(-1,1) =  8.25258332001620E-02
+  RBC(0,1) =   1.18412310238651E+00     ZBS(0,1) =   2.32140638399785E+00
+  RBC(1,1) =  -6.18170127482188E-01     ZBS(1,1) =   6.18170127482188E-01
+  RBC(2,1) =  -2.28961296761534E-02     ZBS(2,1) =   2.28961296761534E-02
+  RBC(-1,2) = -8.20054478733300E-03     ZBS(-1,2) =  8.20054478733300E-03
+  RBC(0,2) =   4.60082978464942E-01     ZBS(0,2) =   5.11003832641962E-02
+  RBC(1,2) =   2.96467473827466E-01     ZBS(1,2) =   3.89637048802881E-02
+  RBC(2,2) =   9.82935293393527E-02     ZBS(2,2) =  -9.82935293393527E-02
+  RBC(0,3) =  -5.31037945996867E-02     ZBS(0,3) =   5.31037945996867E-02
+  RBC(3,3) =  -2.91948408978440E-02     ZBS(3,3) =   2.91948408978440E-02
+/
+
+&OPTIMUM
+!-----------------------------------------------------------------------
+!          OPTIMIZER RUN CONTROL PARAMETERS
+!-----------------------------------------------------------------------
+noptimizers=1
+  NFUNC_MAX = 10
+!  EQUIL_TYPE = 'VMEC2000'
+  EQUIL_TYPE = 'vboot'
+!  OPT_TYPE   = 'LMDIF'
+!  OPT_TYPE   = 'LMDIF_bounded'
+opt_type='single'
+  FTOL =  1.00000000000000E-06
+  XTOL =  1.00000000000000E-30
+  GTOL =  1.00000000000000E-30
+  FACTOR =   100.0
+  EPSFCN =   1.0E-05
+  LKEEP_MINS = T
+!-----------------------------------------------------------------------
+!          OPTIMIZED QUANTITIES
+!-----------------------------------------------------------------------
+!  LCURTOR_OPT = T   CURTOR_MIN  = -1.0E6  CURTOR_MAX  = -1.0E4
+!  LPHIEDGE_OPT = T  PHIEDGE_MIN = 0.20  PHIEDGE_MAX = 1.0
+!  LRHO_OPT(-5:5,0) = 11*T
+!  LRHO_OPT(-5:5,1) = 11*T
+!  LRHO_OPT(-5:5,2) = 11*T
+!  LRHO_OPT(-5:5,3) = 11*T
+!  LRHO_OPT(-5:5,4) = 11*T
+!  LRHO_OPT(-5:5,5) = 11*T
+!  LRHO_OPT(-5:5,6) = 11*T
+!  LRHO_OPT(-5:5,7) = 11*T
+!  LBOUND_OPT(1:4,0) = 4*T
+!  LBOUND_OPT(0,0) = T ! Varies just the major radius
+  RHO_EXP = 4
+!----------------------------------------------------------------------
+!       Profile Functions
+!----------------------------------------------------------------------
+  NE_TYPE = 'power_series'
+  ! Note that ne_opt is normalized to 1e18 meters^{-3}.
+  NE_OPT = 500.0 0.0 0.0 0.0 -500.0
+! TE_OPT and TI_OPT are in units of 1 eV.
+  TE_TYPE = 'power_series'
+  TE_OPT = 7.86692e3 -7.86692e3
+  TI_TYPE = 'power_series'
+  TI_OPT = 7.86692e3 -7.86692e3
+
+bootj_type='power_series'
+bootj_aux_f = 11*1.0 ! For type power_series
+!bootj_aux_f = 0 -1.0e+6 1.0e+6 ! For type power_series
+bootcalc_type='sfincs'
+!sfincs_s = 0.012536, 0.0495156, 0.109084, 0.188255, 0.283058, 0.38874, 0.5, 0.61126, 0.716942, 0.811745, 0.890916, 0.950484, 0.987464 ! Chebyshev points, deleting 0 since it is automatically included.
+
+sfincs_s = 0.00851345, 0.0337639, 0.0748914, 0.130496, 0.198683, 0.277131, 
+0.363169, 0.453866, 0.546134, 0.636831, 0.722869, 0.801317, 0.869504, 0.925109, 0.966236, 0.98 ! 16 radii
+
+!sfincs_s = 0.002264038713458, 0.009035651368647, 0.020253513192751, 0.035816033491964, 0.055582275672538, 0.079373233584409, 
+!0.106973452628606, 0.138132980947465, 0.172569633027357, 0.209971545214401, 0.250000000000000, 0.292292493499057, 
+!0.336466018341289, 0.382120532245286, 0.4288425808633574, 0.4762090420881289, 0.5237909579118711, 0.5711574191366426, 
+!0.617879467754714, 0.663533981658711, 0.707707506500943, 0.750000000000000, 0.790028454785599, 0.827430366972643, 
+!0.861867019052535, 0.893026547371394, 0.920626766415591, 0.944417724327462, 0.964183966508036, 0.979746486807249, 0.990964348631353, 0.997735961286542 ! 32 radii
+
+!sfincs_s = 0.2 0.4 0.6 0.8
+sfincs_min_procs = 16
+vboot_tolerance = 1.e-2
+
+!beamj_type = 'power_series'
+!beamj_aux_f = -6.0e6 6.0e6
+!------------------------------------------------------------------------
+!       Boozer Coordinate Transformation
+!------------------------------------------------------------------------
+!  MBOZ = 64
+!  NBOZ = 32
+MBOZ=32
+NBOZ=16
+!-----------------------------------------------------------------------
+!          COIL OPTIMIZATION PARAMETERS
+!-----------------------------------------------------------------------
+!-----------------------------------------------------------------------
+!          PLASMA PROPERTIES
+!-----------------------------------------------------------------------
+!  TARGET_ASPECT  = 4.370  SIGMA_ASPECT  = 1.0
+!  TARGET_BETA    = 0.042  SIGMA_BETA    = 1.0
+!  TARGET_CURTOR  = 2.0E5  SIGMA_CURTOR  = 1.0E5
+!  TARGET_PHIEDGE = 0.500  SIGMA_PHIEDGE = 1.0
+!  TARGET_RBTOR   = 2.380  SIGMA_RBTOR   = 1.0
+!  TARGET_R0      = 1.600  SIGMA_R0      = 1.0
+!  TARGET_VOLUME  = 1.0E2  SIGMA_VOLUME  = 1.0E2
+!  TARGET_WP      = 1.0E3  SIGMA_WP      = 1.0E3
+!------------------------------------------------------------------------
+!       Boozer Coordinate Helicity
+!         Note that helicity targeting is by surface.  Axis (01) is ignored.
+!         (X,0): Quasi-Axisymetry
+!         (0,X): Quasi-Poloidal Symmetry
+!         (L,K): Quasi-Helical Symmetry (m *K + n*L)
+!------------------------------------------------------------------------
+  HELICITY = (1,0)
+!  TARGET_HELICITY(1:49) = 49*0.0  SIGMA_HELICITY(1:49) = 49*1.0
+!------------------------------------------------------------------------
+!       Ballooning Stability (as calculated by COBRA_VMEC)
+!         Note that ballooning stability is by surface.  Axis (01) is ignored.
+!         THETA, ZETA: Ballooning angle perturbations
+!------------------------------------------------------------------------
+!  BALLOON_THETA   = 0.0
+!  BALLOON_ZETA    = 0.0
+!  TARGET_BALLOON(1:99) = 99*0.0  SIGMA_BALLOON(1:99) = 99*1.0
+!------------------------------------------------------------------------
+!       Kink Stability (as calculated by TERPSICHORE)
+!         Requires STELLOPT to be linked to TERPSICHORE.
+!         Also requires the terpsichore_input file.
+!------------------------------------------------------------------------
+!  MLMNB_KINK =   264  IVAC_KINK =    24
+!  TARGET_KINK(001) =  -1.0  SIGMA_KINK(001) =   1.0   MLMNS_KINK(001) =   76
+!  TARGET_KINK(002) =  -1.0  SIGMA_KINK(002) =   1.0   MLMNS_KINK(002) =   91
+!------------------------------------------------------------------------
+!       Neoclassical Transport Calculation (as calculated by NEO)
+!         Note that neoclassical transport is by surface. Axis (01) is ignored.
+!------------------------------------------------------------------------
+!  TARGET_NEO(1:99) = 99*0.0  SIGMA_NEO(1:99) = 99*1.0
+!------------------------------------------------------------------------
+!       Drift Kinetic Equation Solver (DKES)
+!         Axis (01) is ignored.
+!------------------------------------------------------------------------
+!  TARGET_DKES(1:99) = 99*0.0  SIGMA_DKES(1:99) = 99*1.0
+!  TARGET_DKES(3) = 0.0  SIGMA_DKES(3) = 1.0
+!  TARGET_DKES(3:99) = 97*0.0  SIGMA_DKES(3:99) = 97*1.0
+!------------------------------------------------------------------------
+!       Bootstrap Current Calculation (as calculated by BOOTSJ)
+!------------------------------------------------------------------------
+!  TARGET_BOOTSTRAP(1:99) = 49*0.0  SIGMA_BOOTSTRAP(1:49) = 49*1.0
+!  TARGET_BOOTSTRAP(10) = 0.0   SIGMA_BOOTSTRAP(10) = 1.0e+6
+!  TARGET_BOOTSTRAP(20) = 0.0   SIGMA_BOOTSTRAP(20) = 1.0e+6
+!  TARGET_BOOTSTRAP(30) = 0.0   SIGMA_BOOTSTRAP(30) = 1.0e+6
+!  TARGET_BOOTSTRAP(40) = 0.0   SIGMA_BOOTSTRAP(40) = 1.0e+6
+!-----------------------------------------------------------------------
+!          TURBULENT TRANSPORT
+!-----------------------------------------------------------------------
+!  TARGET_TXPORT(01) = 0.0E+00  SIGMA_TXPORT(01) = 1.0  S_TXPORT(01) = 0.10
+!  TARGET_TXPORT(02) = 0.0E+00  SIGMA_TXPORT(02) = 1.0  S_TXPORT(02) = 0.15
+!  TARGET_TXPORT(03) = 0.0E+00  SIGMA_TXPORT(03) = 1.0  S_TXPORT(03) = 0.20
+!  TARGET_TXPORT(04) = 0.0E+00  SIGMA_TXPORT(04) = 1.0  S_TXPORT(04) = 0.25
+!  TARGET_TXPORT(05) = 0.0E+00  SIGMA_TXPORT(05) = 1.0  S_TXPORT(05) = 0.30
+!  TARGET_TXPORT(06) = 0.0E+00  SIGMA_TXPORT(06) = 1.0  S_TXPORT(06) = 0.35
+!  TARGET_TXPORT(07) = 0.0E+00  SIGMA_TXPORT(07) = 1.0  S_TXPORT(07) = 0.40
+!  TARGET_TXPORT(09) = 0.0E+00  SIGMA_TXPORT(08) = 1.0  S_TXPORT(08) = 0.45
+!  TARGET_TXPORT(09) = 0.0E+00  SIGMA_TXPORT(09) = 1.0  S_TXPORT(09) = 0.50
+!  TARGET_TXPORT(10) = 0.0E+00  SIGMA_TXPORT(10) = 1.0  S_TXPORT(10) = 0.55
+!  TARGET_TXPORT(11) = 0.0E+00  SIGMA_TXPORT(11) = 1.0  S_TXPORT(11) = 0.60
+!  TARGET_TXPORT(12) = 0.0E+00  SIGMA_TXPORT(12) = 1.0  S_TXPORT(12) = 0.65
+!  TARGET_TXPORT(13) = 0.0E+00  SIGMA_TXPORT(13) = 1.0  S_TXPORT(13) = 0.70
+!  TARGET_TXPORT(14) = 0.0E+00  SIGMA_TXPORT(14) = 1.0  S_TXPORT(14) = 0.75
+!  TARGET_TXPORT(15) = 0.0E+00  SIGMA_TXPORT(15) = 1.0  S_TXPORT(15) = 0.80
+!  TXPORT_PROXY = 'prox1d'
+!-----------------------------------------------------------------------
+!          DIAGNO OPTIMIZATION PARAMETERS
+!-----------------------------------------------------------------------
+!  TARGET_FLUXLOOP(1:205) = 205*0.0  SIGMA_FLUXLOOP(1:205) = 205*1.0
+/ 
+
+&BOOTIN 
+   NRHO    =  99
+   MBUSE   =  64
+   NBUSE   =  32
+   ZEFF1   =  1.00
+   DENS0   =  0.50
+   TETI    =  1.00
+   TEMPRES = -1.0
+!   DAMP    = -0.01
+!   DAMP_BS = -0.01
+damp_bs=0.1
+   ISYMM0  =  0
+   ATE=  4.5774107358E+00   -3.4189656529E-01   -2.4139157095E+00   -3.1667990087E+01    1.1944243495E+02   -2.1468460416E+02    1.7964690946E+02   -5.4556914438E+01   -1.4341821998E-03
+   ATI=  4.5774107358E+00   -3.4189656529E-01   -2.4139157095E+00   -3.1667990087E+01    1.1944243495E+02   -2.1468460416E+02    1.7964690946E+02   -5.4556914438E+01   -1.4341821998E-03
+/
+&NEO_IN
+  THETA_N = 200
+  PHI_N = 200
+  MAX_M_MODE = 63
+  MAX_N_MODE = 96
+  NPART = 75
+  MULTRA = 1
+  ACC_req = 0.01
+  NO_BINS = 100
+  NSTEP_PER = 75
+  NSTEP_MIN = 500
+  NSTEP_MAX = 2000
+  CALC_NSTEP_MAX = 0
+  EOUT_SWI = 1
+  LAB_SWI = 0
+  INP_SWI = 0
+  REF_SWI = 2
+  WRITE_PROGRESS = 1
+  WRITE_OUTPUT_FILES = 0
+  SPLINE_TEST = 0
+  WRITE_INTEGRATE = 0
+  WRITE_DIAGNOSTIC = 0
+  CALC_CUR = 1
+  NPART_CUR = 200
+  CALC_CUR = 1
+  CALC_CUR = 1
+/
+&COORDINATES
+ pest=.t.
+ boozer=.f.
+/
+&IN_OUT
+ global_y=.f.
+ vmec_dir='~/VMECfiles'
+ vmec_file='wout_W7X.txt'
+ out_tag='s07'
+ /
+&SETUP
+ s0=.7
+ alpha0=0.
+ alpha0_start=-.6283   
+ alpha0_end=.6283   
+ nalpha0=1 
+ pol_turns=1. 
+ nz0=128
+/
+&DIAGNO_IN
+  NU = 128
+  NV = 128
+  FLUX_DIAG_FILE = '/u/slazerso/Sims/NCSX/probes/diagno_fluxloops_n36.NCSX'
+  INT_TYPE = 'simpson'
+  INT_STEP = 2
+  LRPHIZ = F
+  VC_ADAPT_TOL =  0.0
+  VC_ADAPT_REL =  1.0E-3
+  LVC_FIELD = T
+/
+
+!**********************************
+! Beginning of SFINCS namelists
+!**********************************
+&general
+/
+
+&geometryParameters
+  psiN_wish = 0.2
+  geometryScheme = 5
+  inputRadialCoordinateForGradients=1
+  inputRadialCoordinate = 3  ! rN
+  VMECRadialOption = 0
+  equilibriumFile="/global/homes/l/landrema/20160619-01-Iterating_vmec_and_sfincs/20160619-01-001-Pomphreys5Min_scanType4_simpleIteration_0/wout_lpku_A6_lowiota_5.min_newP.nc"
+/
+
+&speciesParameters
+  nHats = 4.9999872 2.4999936 2.4999936 ! Set by sfincsScan_4.
+  dnHatdpsiNs = -0.00032856608236 -0.00016428304118 -0.00016428304118 ! Set by sfincsScan_4.
+  THats = 7.5522432 7.5522432 7.5522432 ! Set by sfincsScan_4.
+  dTHatdpsiNs = -2.01937740988 -2.01937740988 -2.01937740988 ! Set by sfincsScan_4.
+  Zs = -1 1
+  mHats = 0.000545509d+0 1
+/
+
+&physicsParameters
+  Delta = 4.5694d-3
+  alpha = 1d+0
+  nu_n = 0.00831565d+0
+
+  dPhiHatdpsiN=0.001
+
+  collisionOperator = 0
+  includeXDotTerm = .true.
+  includeElectricFieldTermInXiDot = .true.
+  useDKESExBDrift = .false.
+
+  includePhi1 = .false.
+/
+
+&resolutionParameters
+  Ntheta = 13
+!ss NthetaMinFactor = 0.846
+!ss NthetaMaxFactor = 2.07
+!ss NthetaNumRuns = 100
+
+  Nzeta = 93
+!ss NzetaMinFactor = 1
+!ss NzetaMaxFactor = 1.108
+!ss NzetaNumRuns = 3
+
+  Nxi = 75
+!ss NxiMinFactor = 1
+!ss NxiMaxFactor = 1.01
+!ss NxiNumRuns = 4
+  
+  Nx = 5
+!ss NxMinFactor = 0.8
+!ss NxMaxFactor = 1.6
+!ss NxNumRuns = 30
+
+  solverTolerance = 1d-5
+!ss solverToleranceMinFactor = 0.1
+!ss solverToleranceMaxFactor = 10
+!ss solverToleranceNumRuns = 2
+/
+
+&otherNumericalParameters
+/
+
+&preconditionerOptions
+!  preconditioner_species = 1
+!  preconditioner_x = 1
+!  preconditioner_x_min_L = 0
+!  preconditioner_xi = 0
+/
+
+&export_f
+  export_full_f = .f.
+  export_delta_f = .f.
+/
