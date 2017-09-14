@@ -40,7 +40,7 @@ libparvmec.a:
 	ar -cru libparvmec.a $(PARVMEC_DIR)/*.o
 
 parvmec_minimal_example: parvmec_minimal_example.o libparvmec.a stellopt_reinit_vmec.o stellopt_bcast_vmec.o
-	$(FC) -o parvmec_minimal_example parvmec_minimal_example.o stellopt_reinit_vmec.o stellopt_bcast_vmec.o $(LIBSTELL_DIR)/libstell.a libparvmec.a $(EXTRA_LINK_FLAGS)
+	$(FC) -o parvmec_minimal_example parvmec_minimal_example.o stellopt_reinit_vmec.o stellopt_bcast_vmec.o libparvmec.a $(LIBSTELL_DIR)/libstell.a $(EXTRA_LINK_FLAGS)
 
 clean:
 	rm -f *.o *.mod *.MOD *~ parvmec_minimal_example libparvmec.a

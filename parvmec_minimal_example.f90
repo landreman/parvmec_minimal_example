@@ -2,7 +2,6 @@ program parvmec_minimal_example
 
   use parallel_vmec_module, only: InitRunVmec, FinalizeRunVmec, RUNVMEC_COMM_WORLD
   use vmec_params, only: restart_flag, readin_flag, timestep_flag, output_flag, cleanup_flag, reset_jacdt_flag
-  use safe_open_mod
 
   implicit none
 
@@ -23,11 +22,6 @@ program parvmec_minimal_example
   ! Set ictrl array as done in stellopt_init.f90, to just read in the input file.
   ictrl(1) = restart_flag + readin_flag + reset_jacdt_flag
   ictrl(2) = 0; ictrl(3) = 50; ictrl(4) = 0; ictrl(5) = myseq
-!  IF (master) THEN
-!     CALL safe_open(iunit,ierr,'threed1.'//TRIM(file_str),'unknown','formatted')
-!     CLOSE(iunit)
-!  END IF
-  call MPI_BARRIER(MPI_COMM_WORLD, ierr)
   call runvmec(ictrl,file_str,.false.,MPI_COMM_SELF,'')
 
   if (master) print *,"Done reading input file."

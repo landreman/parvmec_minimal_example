@@ -1,0 +1,10 @@
+#!/bin/bash -l
+
+#SBATCH -p debug
+#SBATCH -N 1
+#SBATCH -t 00:30:00
+#SBATCH -J parvmec
+#SBATCH -C haswell
+
+srun -n 32 /global/cscratch1/sd/landrema/20170914-01-parvmec_minimal_example/parvmec_minimal_example/parvmec_minimal_example
+
