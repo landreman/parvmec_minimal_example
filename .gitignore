@@ -1,0 +1,10 @@
+*.a
+*.o
+*~
+parvmec_minimal_example
+*.dSYM
+jxbout*
+mercier*
+wout*
+threed1*
+parvmecinfo.txt
